@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <script src="jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Exercice 4</title>
+  </head>
+  <body>
+    <button type="button" id="button_1">Action 1</button>
+    <button type="button" id="button_2">Action 2</button>
+    <button type="button" id="button_3">Action 3</button>
+    <button type="button" id="button_4">Action 4</button>
+    <button type="button" id="button_5">Action 5</button>
+    <div id="rectangle"></div>
+  </body>
+  <script>
+    $(function(){
+    // Bouton 1 : augmente la hauteur de 10px, si il dépasse 100px, il remet la hauteur à 10px
+    var maxHeight = '100' ;
+    $('#button_1').click(function(){
+      if($('#rectangle').height() == maxHeight){
+        $('#rectangle').height('');
+      } else($('#rectangle').height('+=10'))
+  });
+    // Bouton 2 : met le rectangle en vert
+    $('#button_2').click(function(){
+      $('#rectangle').css('background-color','green');
+    });
+    // Bouton 3 : remet les couleurs initiales
+    $('#button_3').click(function(){
+      $('#rectangle').css('background-color','');
+    });
+    // Bouton 4 : fait disparaître le rectangle
+    $('#button_4').click(function(){
+      $('#rectangle').hide();
+    });
+    // Bouton 5 : fait réaparaître le rectangle
+    $('#button_5').click(function(){
+      $('#rectangle').show();
+    });
+  });
+  </script>
+
+</html>
